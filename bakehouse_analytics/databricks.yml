@@ -20,7 +20,9 @@ targets:
     # - Deployed resources get prefixed with '[dev my_user_name]'
     # - Any job schedules and triggers are paused by default.
     # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
-    mode: development
+   # mode: development
+    presets:
+      name_prefix: dev_
     default: true
     workspace:
       host: https://dbc-a4e7f3b4-dfcf.cloud.databricks.com
@@ -28,6 +30,8 @@ targets:
       catalog: dev_bakehouse
       schema: rnd
   prod:
+    presets:
+      name_prefix: prod_
     mode: production
     workspace:
       host: https://dbc-a4e7f3b4-dfcf.cloud.databricks.com
