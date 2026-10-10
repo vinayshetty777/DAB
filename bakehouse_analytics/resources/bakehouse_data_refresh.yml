@@ -22,7 +22,7 @@ resources:
           default: ${var.schema}
 
 
-        tasks:
+      tasks:
         - task_key: customer_360
           notebook_task:
             notebook_path: ../src/customer_360.ipynb
